@@ -55,14 +55,12 @@ The UI closely matches the provided designs, achieved through **pure CSS** witho
 
 ## 📝 Getting Started
 
-### Prerequisites
-Ensure you have **Node.js** installed.
 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd kanban-board
+   git clone https://github.com/mk0380/Quicksell-Assignment
+   cd Quicksell-Assignment
 2. Install Dependencies:
     ```bash
     npm install
@@ -79,3 +77,7 @@ The application should now be running locally at http://localhost:3000.
 2. **UI Design**: Matching the provided screenshots.
 3. **Code Structure**: Clean, reusable, and organized component structure.
 4. **Optimization**: Efficient handling of API data and view settings.
+
+
+
+Thank you, and enjoy exploring the Kanban board app!
