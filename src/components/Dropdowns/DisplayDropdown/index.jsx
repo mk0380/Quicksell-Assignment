@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './displayDropdown.css';
-import { LuSettings2 } from 'react-icons/lu';
-import { BiChevronDown } from 'react-icons/bi';
+import { Display, Down } from '../../../utils/icons';
 
 const DisplayDropdown = ({ grouping, setGrouping, ordering, setOrdering }) => {
   const [visible, setVisible] = useState(false);
@@ -30,9 +29,9 @@ const DisplayDropdown = ({ grouping, setGrouping, ordering, setOrdering }) => {
   return (
     <div className="display-dropdown" ref={componentRef}>
       <div className="dropdown-label-container" onClick={openDropdown}>
-        <LuSettings2 color="#6b6f76" />
+        <Display/>
         <div className="dropdown-label">Display</div>
-        <BiChevronDown color="#6b6f76" />
+        <Down/>
       </div>
       {visible && (
         <div className="dropdown-content-container visible">

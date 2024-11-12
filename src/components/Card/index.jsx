@@ -1,10 +1,11 @@
 import React from 'react';
 import './card.css';
 import UserIcon from '../UserIcon';
-import { LuMoreHorizontal } from 'react-icons/lu';
 import { getStatusIcon } from '../../utils/helper';
+import { ThreeDotMenu } from '../../utils/icons';
 
-const Card = ({ ticket, userData, hideStatusIcon, hideProfileIcon }) => {
+const Card = ({ ticket, userData, hideStatusIcon, hideProfileIcon}) => {
+
   return (
     <div className="card">
       <div className="top-container">
@@ -17,7 +18,7 @@ const Card = ({ ticket, userData, hideStatusIcon, hideProfileIcon }) => {
       </div>
       <div className="bottom-container">
         <div className="more-icon-container">
-          <LuMoreHorizontal color="#797d84" />
+          <ThreeDotMenu/>
         </div>
         {ticket.tag.map((t) => (
           <div key={t} className="tag-container">

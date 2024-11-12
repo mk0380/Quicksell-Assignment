@@ -1,10 +1,9 @@
 import React, { useMemo } from 'react';
 import Card from '../Card';
 import './column.css';
-import { GrAdd } from 'react-icons/gr';
-import { LuMoreHorizontal } from 'react-icons/lu';
 import { getPriorityIcon, getStatusIcon } from '../../utils/helper';
 import UserIcon from '../UserIcon';
+import { Add, ThreeDotMenu } from '../../utils/icons';
 
 const Column = ({ tickets, grouping, groupBy, userIdToData }) => {
   const title = useMemo(() => {
@@ -33,8 +32,8 @@ const Column = ({ tickets, grouping, groupBy, userIdToData }) => {
           </div>
         </div>
         <div className="column-header-right-container">
-          <GrAdd color="#797d84" size={12} />
-          <LuMoreHorizontal color="#797d84" size={14} />
+          <Add/>
+          <ThreeDotMenu/>
         </div>
       </div>
       <div className="cards-container">
@@ -45,7 +44,7 @@ const Column = ({ tickets, grouping, groupBy, userIdToData }) => {
             userData={userIdToData[ticket.userId]}
             hideStatusIcon={grouping === 'status'}
             hideProfileIcon={grouping === 'user'}
-          />
+           />
         ))}
       </div>
     </div>
