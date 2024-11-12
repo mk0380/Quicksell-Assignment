@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Grid from './components/Grid';
-import { GET_TICKETS_URL } from './constants';
+import { QUICKSELL_API } from './constants';
 import { loadGrid, mapUsersByUserId } from './utils';
 import Loader from './components/Loader';
 import './App.css';
@@ -14,7 +14,6 @@ const App = () => {
   const [ordering, setOrdering] = useState("priority");
   const [loading, setLoading] = useState(true);
 
-  // Move loadSettings above the useEffect where it’s used
   const loadSettings = useCallback(() => {
     setGrouping(localStorage.getItem("grouping") || "status");
     setOrdering(localStorage.getItem("ordering") || "priority");
@@ -40,7 +39,7 @@ const App = () => {
 
   useEffect(() => {
     loadSettings();
-    fetch(GET_TICKETS_URL)
+    fetch(QUICKSELL_API)
       .then((resp) => resp.json())
       .then((res) => {
         const { tickets, users } = res;

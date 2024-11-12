@@ -1,1 +1,1 @@
-export const GET_TICKETS_URL = "https://api.quicksell.co/v1/internal/frontend-assignment";
+export const QUICKSELL_API = "https://api.quicksell.co/v1/internal/frontend-assignment";
